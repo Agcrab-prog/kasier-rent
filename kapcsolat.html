@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kapcsolat</title>
+</head>
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+    
+        if (window.scrollY > 0) {
+           header.classList.add('scrolled'); 
+        } else {
+            header.classList.remove('scrolled');
+        }
+    })
+
+    function showPopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'block';
+    }
+
+    function closePopup() {
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none';
+    }
+</script>
+<body style="background: url(kepek/kapcsolat.jpg) no-repeat; background-size: cover; background-position: center -180px;">
+    
+    <header class="header">
+        <a href="index.html" class="logo"> <b style="color:rgb(151, 0, 0);">/KR</b> Kaiser Rent</a>
+    
+        <nav class="navbar">
+            <a href="index.html">Főoldal</a>
+            <a href="rolunk.html">Rólunk</a>
+            <a href="autok.html">Autók</a>
+            <a href="foglalas.html">Foglalás</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <hr  style="margin-top: -30px; width: 100%; position: fixed; size: 3px;">
+
+    <h1 style="color: white; margin-left: 815px; margin-top: 120px; font-size: 50px;">KAPCSOLAT</h1>
+    
+    <div class="form-container2">
+        <form id="contactForm" class="form">
+            <label for="name">Név:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Üzenet:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="button" onclick="sendMessage()">Küldés</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h2>Elérhetőségeink:</h2>
+        <p>Email: kaiserrent@gmail.com</p>
+        <p>Instagram: @kaiserrent</p>
+        <p>Facebook: Kaiser Rent</p>
+        <p>TikTok: @kaiserrentofficial</p>
+    </div>
+
+    <div id="popup" class="popup">
+        <p>Üzenet kezbesítve, hamarosan felvesszük önnel a kapcsolatot</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <footer style="margin-top: 40px;">
+        <h4>Tulajdonos: Kaiser Rent Kft.</h4>
+        <p>kaiserrent@gmail.com</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            showPopup(); // Popup megjelenítése
+            document.getElementById("contactForm").reset(); // Űrlap tartalmának törlése
+        }
+    </script>
+</body>
+</html>
