@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autók - Audi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+    
+    if (window.scrollY > 0) {
+       header.classList.add('scrolled'); 
+    }
+    else {
+        header.classList.remove('scrolled');
+    }
+    })
+
+
+    var links = document.getElementsByClassName('link')
+    for(var i = 0; i <= links.length; i++)
+    addClass(i)
+
+
+    function addClass(id){
+        setTimeout(function(){
+        if(id > 0) links[id-1].classList.remove('hover')
+        links[id].classList.add('hover')
+   }, id*750) 
+}
+</script>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"> <b style="color: rgb(151, 0, 0);">/KR</b> Kaiser Rent</a>
+    
+        <nav class="navbar">
+            <a href="index.html">Főoldal</a>
+            <a href="rolunk.html">Rólunk</a>
+            <a href="autok.html">Autók</a>
+            <a href="foglalas.html">Foglalás</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <hr class="line" style="margin-top: 90px; width: 77%; margin-left: 5px;">
+    <hr class="line" style="margin-top: 90px; width: 33%; margin-left: 1790px;;">
+
+    <div class="backgorund-picture"></div>
+
+    <h1 style="color: white; font-size: 65px; margin-top: -280px; margin-left: 170px; font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif;">  <b>BÉRELHETŐ AUTÓINK</b></h1>
+    
+    <div class="container2">
+        <p style="color: white;">s</p>
+    </div>
+
+    
+
+    <div class="card-container" style="margin-top: -1100px;">
+        <div class="card">
+            <img src="kepek/audi/elso.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi A8</h3>
+                <p>Az Audi A8 a márka csúcsmodellje, mely luxust és innovációt kínál. Kényelmes belsővel, high-tech vezetést támogató rendszerekkel és prémium minőségű anyagokkal rendelkezik.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 28%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/audi/masodik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi RS7</h3>
+                <p>Az Audi RS7 egy sportos és luxusautó, melyet az Audi Sport divízió készít. Erőteljes V8-as motorral, dinamikus vezetési élménnyel és exkluzív kialakítással rendelkezik.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 28%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/audi/harmadik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi Q7</h3>
+                <p>  Az Audi Q7 egy luxus-SUV, mely tágas és kényelmes belsőt kínál. Innovatív technológiákkal és prémium felszereltséggel rendelkezik, ideális választás családoknak vagy akár hosszabb utazásokra.
+
+                </p>
+                <a href="foglalas.html" class="btn" style="margin-top: 21%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/audi/negyedik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi e-tron GT</h3>
+                <p>Az Audi e-tron GT egy teljesen elektromos luxusautó, mely elegáns és sportos dizájnt kínál. Kiváló teljesítménnyel és hosszú hatótávolsággal rendelkezik, és a legújabb technológiákat használja az elektromos mobilitás terén.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 14%;">Foglalás</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-container" style="margin-top: 0px;">
+        <div class="card">
+            <img src="kepek/audi/otodik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi S8</h3>
+                <p> Az Audi S8 egy luxus-szintű teljesítményautó, mely eleganciát és dinamikus vezetési élményt kínál. Erőteljes motorral és fejlett vezetést támogató rendszerekkel rendelkezik.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 23%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/audi/hatodik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi A7 Sportback</h3>
+                <p> Az Audi A7 Sportback egy elegáns és sportos kupé-limuzin, melyben a kényelem és a teljesítmény harmonikusan egyesül. Stílusos kialakítással és high-tech belsővel rendelkezik.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 17%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/audi/hetedik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi Q8</h3>
+                <p>Az Audi Q8 egy luxus-SUV, melyet kifinomult design és kényelmes belső jellemzi. Erőteljes motorokkal és prémium felszereltséggel rendelkezik, ideális választás azoknak, akik stílust és teljesítményt keresnek egy autóban.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 16%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/audi/nyolcadik.jpg" alt="">
+            <div class="card-content">
+                <h3>Audi R8</h3>
+                <p>Az Audi R8 egy ikonikus sportautó, melyet a márka legkifinomultabb technológiáival és tervezési elemekkel készítenek. Kiváló teljesítményt és vezetési élményt kínál, ideális választás azoknak, akik szeretik az exkluzivitást és a sebességet.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 9%;">Foglalás</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: -1065px;">
+        <div class="link text">
+          <a href="autok.html" style="text-decoration: none; color: white;">Mercedes</a></div>
+        <div class="link text">
+          <a href="autok-audi.html" style="text-decoration: none; color: white;">Audi</a></div>
+        <div class="link text">
+            <a href="autok-bmw.html" style="text-decoration: none; color: white;">BMW</a></div>
+        <div class="link text">
+            <a href="autok-ferrari.html" style="text-decoration: none; color: white;">Ferrari</a></div>
+        <div class="link text">
+          Lamborghini</div>
+        <div class="link text">
+          Mustang</div>
+        <div class="link text">
+          Dodge</div>
+        <div class="link text">
+        McLaren</div>
+        <div class="link text">
+        Aston Martin</div>
+        <div class="link text">
+        Maserati</div>
+      </div>
+
+    <footer style="margin-top: -5px;">
+        <h4>Tulajdonos: Kaiser Rent Kft.</h4>
+        <p>kaiserrent@gmail.com</p>
+    </footer>
+</body>
+</html>

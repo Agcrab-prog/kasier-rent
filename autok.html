@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autók - Mercedes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+    
+    if (window.scrollY > 0) {
+       header.classList.add('scrolled'); 
+    }
+    else {
+        header.classList.remove('scrolled');
+    }
+    })
+
+
+    var links = document.getElementsByClassName('link')
+    for(var i = 0; i <= links.length; i++)
+    addClass(i)
+
+
+    function addClass(id){
+        setTimeout(function(){
+        if(id > 0) links[id-1].classList.remove('hover')
+        links[id].classList.add('hover')
+   }, id*750) 
+}
+</script>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"> <b style="color: rgb(151, 0, 0);">/KR</b> Kaiser Rent</a>
+    
+        <nav class="navbar">
+            <a href="index.html">Főoldal</a>
+            <a href="rolunk.html">Rólunk</a>
+            <a href="autok.html">Autók</a>
+            <a href="foglalas.html">Foglalás</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <hr class="line" style="margin-top: 90px; width: 77%; margin-left: 5px;">
+    <hr class="line" style="margin-top: 90px; width: 33%; margin-left: 1790px;;">
+
+    <div class="backgorund-picture"></div>
+
+    <h1 style="color: white; font-size: 65px; margin-top: -280px; margin-left: 170px; font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif;">  <b>BÉRELHETŐ AUTÓINK</b></h1>
+    
+    <div class="container2">
+        <p style="color: white;">s</p>
+    </div>
+
+    
+
+    <div class="card-container" style="margin-top: -1100px;">
+        <div class="card">
+            <img src="kepek/mercedes/elso.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-Maybach S650</h3>
+                <p>A Mercedes-Maybach S650 egy luxusautó, melyet a Mercedes-Benz a Maybach márkája alatt gyárt. Kényelmes, elegáns és erőteljes, általában V12-es motorral rendelkezik, és exkluzív kényelmi felszerelésekkel, mint például a masszázsfunkcióval ellátott ülésekkel vagy a Burmester hangrendszerrel.</p>
+                <a href="foglalas.html" class="btn">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/mercedes/masodik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-AMG GT</h3>
+                <p> Az AMG GT egy sportos, elegáns és erőteljes modell a Mercedes-AMG divíziótól. Kínálja a kiváló teljesítményt és a prémium minőséget, gyakran kapható V8-as biturbó motorral, mely lenyűgöző gyorsulást biztosít.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 20%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/mercedes/harmadik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-Benz G-Class (G63 AMG)</h3>
+                <p> A G-Class egy legendás terepjáró, melynek AMG feldolgozása, a G63 AMG, még inkább luxusautóvá teszi. Robusztus külseje mellett kifinomult belsőt és vezetési élményt kínál.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 19%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/mercedes/negyedik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-Benz S-Class</h3>
+                <p>Az S-Class a Mercedes-Benz csúcsmodellje, amely luxust és kényelmet kínál a vezetőnek és az utasoknak. Kiváló minőségű anyagokkal és innovatív technológiákkal rendelkezik, mint például az energiát takarító feszültségérzékelő ülések.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 14%;">Foglalás</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-container" style="margin-top: 0px;">
+        <div class="card">
+            <img src="kepek/mercedes/otodik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-Benz EQS</h3>
+                <p> Az EQS egy teljesen elektromos luxusautó, mely a Mercedes-Benz elektromos járműveinek zászlóshajója. High-tech belsővel és hosszú hatótávval rendelkezik, és az elektromos járművek luxusát kínálja a prémium kategóriában.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 13%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/mercedes/hatodik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-Maybach GLS 600</h3>
+                <p>Ez a modell a Mercedes-Benz luxus-SUV-jának, a GLS-nek a Maybach feldolgozása. Különleges luxusfelszerelésekkel rendelkezik, mint például a főbb ülésekkel, a hátsó középső üléssel és a Burmester High-End 3D Surround Sound rendszerrel.</p>
+                <a href="foglalas.html" class="btn">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/mercedes/hetedik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-AMG S63 Cabriolet</h3>
+                <p>Az AMG S63 Cabriolet egy luxus-kabrió verzió az S-Classból, melyet az AMG erőteljes motorral és sportos hangzással látnak el. Kényelmet és stílust kínál a nyitott tetős vezetés szerelmeseinek.</p>
+                <a href="foglalas.html" class="btn" style="margin-top: 20%;">Foglalás</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="kepek/mercedes/nyolcadik.jpg" alt="">
+            <div class="card-content">
+                <h3>Mercedes-Benz SL-Class</h3>
+                <p>Az SL-Class egy ikonikus sportkupé, mely a Mercedes-Benz luxusautók hagyományait folytatja. Dinamikus teljesítményt, kifinomult formatervezést és luxusbelteret kínál az autó szerelmeseinek.
+                </p>
+                <a href="foglalas.html" class="btn" style="margin-top: 13%;">Foglalás</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: -1055px;">
+        <div class="link text">
+          <a href="autok.html" style="text-decoration: none; color: white;">Mercedes</a></div>
+        <div class="link text">
+          <a href="autok-audi.html" style="text-decoration: none; color: white;">Audi</a></div>
+        <div class="link text">
+            <a href="autok-bmw.html" style="text-decoration: none; color: white;">BMW</a></div>
+        <div class="link text">
+            <a href="autok-ferrari.html" style="text-decoration: none; color: white;">Ferrari</a></div>
+        <div class="link text">
+          Lamborghini</div>
+        <div class="link text">
+          Mustang</div>
+        <div class="link text">
+          Dodge</div>
+        <div class="link text">
+        McLaren</div>
+        <div class="link text">
+        Aston Martin</div>
+        <div class="link text">
+        Maserati</div>
+      </div>
+
+    <footer style="margin-top: -20px;">
+        <h4>Tulajdonos: Kaiser Rent Kft.</h4>
+        <p>kaiserrent@gmail.com</p>
+    </footer>
+</body>
+</html>
