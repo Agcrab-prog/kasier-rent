@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Főoldal</title>
+</head>
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+    
+    if (window.scrollY > 0) {
+       header.classList.add('scrolled'); 
+    }
+    else {
+        header.classList.remove('scrolled');
+    }
+    })
+</script>
+<body style="min-height: 100vh; background: url(kepek/proba3.jpg); background-size: contain; background-position: top;">
+    
+    <header class="header">
+        <a href="index.html" class="logo"> <b style="color:rgb(151, 0, 0);">/KR</b> Kaiser Rent</a>
+    
+        <nav class="navbar">
+            <a href="index.html">Főoldal</a>
+            <a href="rolunk.html">Rólunk</a>
+            <a href="autok.html">Autók</a>
+            <a href="foglalas.html">Foglalás</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <hr class="line" style="margin-top: -90px;">
+
+
+    <div class="content">
+        <h1 style="text-align: left; margin-left: -140px; margin-top: 170px;">KAISER RENT - ÁLOMBÓL VALÓSÁG</h1>
+        <h3 style="text-align: left; margin-left: -140px; font-size: 50px;">válassz <b style="color: rgb(151, 0, 0);">365</b> autó közül</h3>
+        <button class="button button1"><a href="autok.html" style="color: white; text-decoration: none;">BÉRELD KI AZ ÁLOM AUTÓD</a></button>
+    </div>
+
+    <div class="content2">
+        <p style="text-align: left; margin-top: -20px; font-size: 40px; color: rgb(255, 255, 255);"><b>Célunk minél több ember arcára mosolyt csalni.</b></p>
+        <p style="font-size: 25px; color: white; font-size: 22px;">
+            Legyen szó egy férjről, aki születésnapjára, vagy évfordulójukra kapja ajándékba az élményt, egy lányról, akinek jövendőbeli autójukkal kérik meg a kezét, egy feleségről,
+            aki a nagy napon álmai autójával érkezhet, vagy egy kisgyermekről, aki ettől fogva tudja, hogy bármit elérhet az életben. Mert ma ez még “csak egy élmény”, ám hamarosan 
+            az új valóság.
+        </p>
+
+    </div>
+
+    <div class="content3">
+        <h3 style=" text-align: center; color: rgb(151, 0, 0); font-size: 65px;">Hogyan bérelj mindössze 3 lépésben?</h3>
+        <div style="text-align: left; margin-left: 230px; margin-top: 5px; font-size: 14px;">
+            <div style="width: 20%; margin-top: 40px;">
+                <p>
+                    <b>1.</b> 
+                    <b>Autóválasztás</b> <br>
+                    Válaszd ki azt az autót, mely a legnagyobb mosolyt fogja csalni az arcotokra.
+                </p>
+            </div>
+            
+            <div style="width: 20%; margin-left: 380px; margin-top: -97px; font-size: 14px;">
+                <p>
+                    <b>2.</b> 
+                    <b>Dátum & Foglalás</b> <br>
+                    Nézd át a választott autó naptárát, tűzd ki a dátumot és add le foglalási igényedet egy szabad időpontra.
+                </p>
+        
+            </div>
+            
+            <div style="width: 20%; margin-left: 780px; margin-top: -95px;">
+                <p  background-color: rgb(206, 206, 206);>
+                    <b>3.</b>
+                    <b>Átvétel</b> <br>
+                    A megadott dátumon egy előre egyeztetett helyszínen kollégáink csillogó autóval fognak várni.
+                </p>
+            </div>   
+        </div>
+    
+        </div>
+        
+    <div class="bg2">
+        <p style="color: white;"></p>
+    </div>
+
+    <footer>
+        <h4>Tulajdonos: Kaiser Rent Kft.</h4>
+        <p>kaiserrent@gmail.com</p>
+    </footer>
+</body>
+</html>

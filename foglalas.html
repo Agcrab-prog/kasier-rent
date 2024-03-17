@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Foglalás</title>
+</head>
+<script>
+document.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled'); 
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+function updateTipusok() {
+    var marka = document.getElementById("marka").value;
+    var tipusSelect = document.getElementById("tipus");
+    tipusSelect.innerHTML = ""; 
+
+    if (marka === "Audi") {
+        addOption(tipusSelect, "Audi A8", "Audi A8");
+        addOption(tipusSelect, "Audi RS7", "Audi RS7");
+        addOption(tipusSelect, "Audi Q7", "Audi Q7");
+        addOption(tipusSelect, "Audi e-tron GT", "Audi e-tron GT");
+        addOption(tipusSelect, "Audi S8", "Audi S8");
+        addOption(tipusSelect, "Audi A7 Sportback", "Audi A7 Sportback");
+        addOption(tipusSelect, "Audi Q8", "Audi Q8");
+        addOption(tipusSelect, "Audi R8", "Audi R8");
+    } 
+    else if (marka === "BMW") {
+        addOption(tipusSelect, "BMW 7-es sorozat", "BMW 7-es sorozat");
+        addOption(tipusSelect, "BMW M5", "BMW M5");
+        addOption(tipusSelect, "BMW X7", "BMW X7");
+        addOption(tipusSelect, "BMW i8", "BMW i8");
+        addOption(tipusSelect, "BMW 8-as sorozat", "BMW 8-as sorozat");
+        addOption(tipusSelect, "BMW X6 M", "BMW X6 M");
+        addOption(tipusSelect, "BMW 6-os sorozat Gran Turismo", "BMW 6-os sorozat Gran Turismo");
+        addOption(tipusSelect, "BMW M8", "BMW M8");
+    } 
+    else if (marka === "Mercedes") {
+        addOption(tipusSelect, "Mercedes-Maybach S650", "Mercedes-Maybach S650");
+        addOption(tipusSelect, "Mercedes-AMG GT", "Mercedes-AMG GT");
+        addOption(tipusSelect, "Mercedes-Benz G-Class (G63 AMG)", "Mercedes-Benz G-Class (G63 AMG)");
+        addOption(tipusSelect, "Mercedes-Benz S-Class", "Mercedes-Benz S-Class");
+        addOption(tipusSelect, "Mercedes-Benz EQS", "Mercedes-Benz EQS");
+        addOption(tipusSelect, "Mercedes-Maybach GLS 600", "Mercedes-Maybach GLS 600");
+        addOption(tipusSelect, "Mercedes-AMG S63 Cabriolet", "Mercedes-AMG S63 Cabriolet");
+        addOption(tipusSelect, "Mercedes-Benz SL-Class", "Mercedes-Benz SL-Class");
+    }
+    else if (marka === "Ferrari") {
+        addOption(tipusSelect, "Ferrari 812 Superfast", "Ferrari 812 Superfast");
+        addOption(tipusSelect, "Ferrari Portofino", "Ferrari Portofino");
+        addOption(tipusSelect, "Ferrari Roma", "Ferrari Roma");
+        addOption(tipusSelect, "Ferrari SF90 Stradale", "Ferrari SF90 Stradale");
+        addOption(tipusSelect, "Ferrari F8 Tributo", "Ferrari F8 Tributo");
+        addOption(tipusSelect, "Ferrari GTC4 Lusso", "Ferrari GTC4 Lusso");
+        addOption(tipusSelect, "Ferrari 488 Pista", "Ferrari 488 Pista");
+        addOption(tipusSelect, "Ferrari LaFerrari", "Ferrari LaFerrari");
+    }
+}
+
+function addOption(selectElement, text, value) {
+    var option = document.createElement("option");
+    option.text = text;
+    option.value = value;
+    selectElement.add(option);
+}
+
+window.onload = updateTipusok;
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("foglalasForm").addEventListener("submit", showConfirmation);
+    document.getElementById("confirmReservationBtn").addEventListener("click", confirmReservation);
+});
+
+function showConfirmation(event) {
+    event.preventDefault(); 
+    var nev = document.getElementById("nev").value;
+    var email = document.getElementById("email").value;
+    var hol = document.getElementById("hol").value;
+    var telefonszam = document.getElementById("telefonszam").value;
+    var mikor = document.getElementById("mikor").value;
+    var marka = document.getElementById("marka").value;
+    var tipus = document.getElementById("tipus").value;
+
+    var confirmationMessage = "Név: " + nev + "<br>" +
+        "Email: " + email + "<br>" +
+        "Hol szeretné átvenni az autót: " + hol + "<br>" +
+        "Telefonszám: " + telefonszam + "<br>" +
+        "Mikor szeretné lefoglalni: " + mikor + "<br>" +
+        "Márka: " + marka + "<br>" +
+        "Típus: " + tipus;
+
+    document.getElementById("confirmationMessage").innerHTML = confirmationMessage;
+    document.getElementById("confirmationModal").style.display = "block";
+}
+
+function confirmReservation() {
+    document.getElementById("confirmationModal").style.display = "none";
+    document.getElementById("successModal").style.display = "block";
+    document.getElementById("okBtn").addEventListener("click", hideSuccessMessage);
+}
+
+function hideSuccessMessage() {
+    document.getElementById("successModal").style.display = "none";
+}
+
+</script>
+<body style="background-color: white;">
+
+    <div class="bg3">
+    </div>
+
+
+    <h1 style="color: white; margin-top: -430px; margin-left: 50px; font-size: 50px;">FOGLALD LE AZ ÁLOM AUTÓD</h1>
+    <h3 style="color: white; margin-top: -10px; margin-left: 50px; font-size: 40px;">ÉS VEZESD AKÁR MÁR <b style="color: rgb(151, 0, 0);">MA</b></h3>
+
+    <header class="header">
+        <a href="index.html" class="logo"> <b style="color:rgb(151, 0, 0);">/KR</b> Kaiser Rent</a>
+
+        <nav class="navbar">
+            <a href="index.html">Főoldal</a>
+            <a href="rolunk.html">Rólunk</a>
+            <a href="autok.html">Autók</a>
+            <a href="foglalas.html">Foglalás</a>
+            <a href="kapcsolat.html">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <hr  style="margin-top: -155px; width: 36%; position: fixed; size: 3px;">
+    <hr  style="margin-top: -155px; width: 36%; position: fixed; size: 3px; margin-left: 1300px;">
+
+    <div class="form-container" style="margin-top: 360px; margin-left: 50px;">
+        <h1>Foglalás</h1>
+        <form id="foglalasForm" action="" method="post">
+            <label for="nev">Név:</label><br>
+            <input type="text" id="nev" name="nev" style="background-color: white; color: black;"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" style="background-color: white; color: black;"><br>
+            <label for="hol">Hol szeretné átvenni az autót:</label><br>
+            <select class="hatter" id="hol" style="background-color: white; color: black;">
+                <option>Budapest XIII.</option>
+                <option>Budapest X.</option>
+                <option>Budapest V.</option>
+                <option>Budapest VII.</option>
+            </select> <br>
+            <label for="telefonszam">Telefonszám:</label><br>
+            <input type="tel" id="telefonszam" name="telefonszam" style="background-color: white; color: black;"><br>
+            <label for="marka">Melyik márkától szeretne bérelni:</label><br>
+            <select class="hatter" id="marka" name="marka" onchange="updateTipusok()" style="background-color: white; color: black;">
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Ferrari">Ferrari</option>
+            </select> <br>
+
+            <label for="marka">Melyik márkától szeretne bérelni:</label><br>
+            <select class="hatter" id="tipus" name="tipus" style="background-color: white; color: black;">
+               
+            </select> <br>
+            <label for="mikor">Mikor szeretné lefoglalni:</label><br>
+            <input type="date" id="mikor" name="mikor" style="background-color: white; color: black;"><br>
+            <button type="submit" id="submitBtn" style="background-color: white; color: black;">Foglalás elküldése</button>
+        </form>
+    </div>
+
+    <div id="confirmationModal" class="confirmation-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="confirmationMessage"></p>
+            <button type="button" id="confirmReservationBtn">Foglalás megerősítése</button>
+        </div>
+    </div>
+    
+    <div id="successModal" class="confirmation-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="successMessage">A foglalás sikeres volt!</p>
+            <button type="button" id="okBtn">OK</button>
+        </div>
+    </div>
+
+
+<div>
+    <div class="info-container" style="width: 1300px; margin-left: 580px; margin-top: -1025px;">
+            <h2>Első körben nincs kötelezettséged!</h2>
+            <p>A bérlést mindenféleképpen jóvá kell hagynunk, valamint felvesszük veled a kapcsolatot előtte.</p>
+            <p>További információkért keress minket az <a href="mailto:kaiserrent@gmail.com" style="color: white; text-decoration: none;">kaiserrent@gmail.com</a> címen!</p>
+    </div>
+
+    
+    <div class="info-container" style="width: 1300px; margin-left: 580px;">
+        <div>
+                <h1 style="color: white;">Nagyon fontos!</h1>
+
+            <div>
+                <img src="kepek/x-icon.jpg" alt="X icon" style="vertical-align: middle; margin-right: 10px;">
+                <span>Semelyik versenypályára nem vihető fel egyik autó sem! (pl. Euroring, Hungaroring)</span>
+            </div>
+            <div class="additional-info-box2">
+                <img src="kepek/x-icon.jpg" alt="X icon" style="vertical-align: middle; margin-right: 10px;">
+                <span>Off-road (földpálya), rossz minőségű utak</span>
+            </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="info-container" style="margin-left: 580px; width: 1300px;">
+        <h1 style="color: white;">Bérléshez szükséges</h1>
+        <div>
+            <img src="kepek/correct.jpg" alt="X icon" style="vertical-align: middle; margin-right: 10px;">
+            <span>Minimum 5 éves B kategóriás jogosítvány</span>
+        </div>
+        <div>
+            <img src="kepek/correct.jpg" alt="X icon" style="vertical-align: middle; margin-right: 10px;">
+            <span>Betöltött 23. életév</span>
+        </div>
+        <div>
+            <img src="kepek/correct.jpg" alt="X icon" style="vertical-align: middle; margin-right: 10px;">
+            <span>500.000 Ft kaució</span>
+        </div>
+        <div>
+            <img src="kepek/correct.jpg" alt="X icon" style="vertical-align: middle; margin-right: 10px;">
+            <span>FEGYELEM, KÖRÜLTEKINTÉS</span>
+        </div>
+    </div>
+
+    <div class="info-container" style="margin-left: 580px; width: 1300px; height: 427px;">
+        <h1>Ezt tartsd szemmel a bérlés során!</h1>
+        <h3>Minél több napra bérled, annál több kilómétert mehetsz vele. A számítás a következőképpen alakul:</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; margin-top: 55px;">
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">1 NAPRA</p>
+                <p>300 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">4 NAP</p>
+                <p>1000 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">7 NAP</p>
+                <p>1350 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">2 NAP</p>
+                <p>550 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">5 NAP</p>
+                <p>1150 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">8+ NAP</p>
+                <p>Érdeklődj!</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">3 NAP</p>
+                <p>800 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">6 NAP</p>
+                <p>1250 km</p>
+            </div>
+            <div>
+                <p style="font-size: 30px; font-weight: bold;">EXTRA KM</p>
+                <p>150 Ft / km</p>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    
+    <footer style="margin-top: 50px;">
+        <h4>Tulajdonos: Kaiser Rent Kft.</h4>
+        <p>kaiserrent@gmail.com</p>
+    </footer>
+</body>
+</html>
